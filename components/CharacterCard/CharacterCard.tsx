@@ -5,7 +5,6 @@ import styles from "./CharacterCard.module.css";
 type PropsType = {
     character: CharacterType
 }
-
 export const CharacterCard = (props: PropsType) => {
     const {character} = props
 
