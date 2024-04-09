@@ -5,7 +5,6 @@ import {HeadMeta} from "components/HeadMeta/HeadMeta";
 import {getLayout} from "components/Layout/Layout";
 import Link from "next/link";
 
-
 function Characters() {
     const characters = useCharacters()
 

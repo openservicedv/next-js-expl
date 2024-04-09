@@ -6,9 +6,6 @@ import {HeadMeta} from "@/components/HeadMeta/HeadMeta";
 import {Navbar} from "@/components/Navbar/Navbar";
 import {getLayout} from "@/components/Layout/Layout";
 
-
-const inter = Inter({subsets: ["latin"]});
-
 function Character() {
     const character = useCharacter()
 
