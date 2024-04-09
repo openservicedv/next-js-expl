@@ -12,7 +12,7 @@ export const useCharacters = (): Nullable<CharacterType[]> => {
     const [characters, setCharacters] = useState<Nullable<CharacterType[]>>([])
 
     useEffect(() => {
-        axios.get("https://rickandmortyapi.com/api/character")
+        axios.get(`${process.env.NEXT_PUBLIC_API_URL}`)
             .then(res => setCharacters(res.data.results))
 
     }, []);
