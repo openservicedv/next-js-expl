@@ -4,24 +4,27 @@ import {CharacterCard} from "@/components/CharacterCard/CharacterCard";
 import {useCharacters} from "@/assets/hooks/useCharacters";
 import {HeadMeta} from "@/components/HeadMeta/HeadMeta";
 import {Navbar} from "@/components/Navbar/Navbar";
+import {getLayout} from "@/components/Layout/Layout";
+import Link from "next/link";
 
 const inter = Inter({subsets: ["latin"]});
 
-export default function Characters() {
+function Characters() {
     const characters = useCharacters()
 
     return (
         <>
             <HeadMeta title={'Characters'}/>
-            <main className={`${styles.main} ${inter.className}`}>
-                <Navbar />
-                {characters && characters.map(character => (
+            {characters && characters.map(character => (
+                <Link key={character.id} href={`/characters/${character.id}`}>
                     <CharacterCard
-                        key={character.id}
                         character={character}
                     />
-                ))}
-            </main>
+                </Link>
+            ))}
         </>
     );
 }
+
+Characters.getLayout = getLayout
+export default Characters
