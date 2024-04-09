@@ -1,6 +1,6 @@
 import {CharacterType} from "@/assets/hooks/useCharacters";
 import Image from "next/image";
-import styles from "./CharacterCard.module.css";
+import styles from "./CharacterCard.module.scss";
 
 type PropsType = {
     character: CharacterType
